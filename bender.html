@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" type="text/css" href="bender.css">
+    <!-- Enlace a las fuentes de Google Fonts (puedes mantener esto si lo necesitas) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <!-- Agregar los ojos aquí -->
+                <div class="eyes" style="left: 20px;"></div>
+                <div class="eyes" style="right: 20px;"></div>
+            </div>
+            <button class="col-2" onclick="display.borrarTodo()">C</button>
+            <button onclick="display.borrar()">&larr;</button>
+            <button class="operador" value="dividir">%</button>
+            <button class="numero" onclick="display.agregarNumero('')">7</button>
+            <button class="numero" onclick="display.agregarNumero('')">8</button>
+            <button class="numero" onclick="display.agregarNumero('')">9</button>
+            <button class="operador" value="multiplicar">X</button>
+            <button class="numero" onclick="display.agregarNumero('')">4</button>
+            <button class="numero" onclick="display.agregarNumero('')">5</button>
+            <button class="numero" onclick="display.agregarNumero('')">6</button>
+            <button class="operador" value="restar">-</button>
+            <button class="numero" onclick="display.agregarNumero('')">1</button>
+            <button class="numero" onclick="display.agregarNumero('')">2</button>
+            <button class="numero" onclick="display.agregarNumero('3')">3</button>
+            <button class="operador" value="sumar">+</button>
+            <button class="numero col-2" onclick="display.agregarNumero('')">0</button>
+            <button class="numero" onclick="display.agregarNumero('.')">.</button>
+            <button class="operador" value="igual" onclick="display.computar('igual')">=</button>
+            <div class="white-oval"></div>
+        </div>    
+    </div>
+    
+    <!-- Incluye tus archivos JavaScript -->
+    <script src="Calculadora.js" type="text/javascript"></script>
+    <script src="Display.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript" defer></script>
+</body>
+</html>

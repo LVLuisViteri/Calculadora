@@ -1,0 +1,166 @@
+*{
+    font-family: "Fraunces", serif;
+    color: #fff
+}
+body {
+    margin: 0;
+    background-color: #224870;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    background-color:#808080;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #808080;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #191a1a1f;
+}
+
+button:active{
+    background-color: #006f54;
+}
+button:focus{
+    outline: none;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+.display{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #363636;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+}
+
+#valor-actual{
+    font-size: 1.5em;
+}
+
+#valor-anterior{
+    font-size: 2em;
+}
+
+/* Estilos para los ojos */
+.eyes {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: 130px; /* Ajusta la posición vertical según sea necesario */
+    opacity: 0.7; /* Ajusta la opacidad según sea necesario */
+    margin-left: 660px;
+    margin-right: 660px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5); /* Agregar sombra */
+}
+
+/* Cuadrado izquierdo */
+.eyes::before {
+    content: '';
+    position: absolute;
+    width: 10px; /* Ancho del cuadrado */
+    height: 10px; /* Alto del cuadrado */
+    background-color: black;
+    top: 50%; /* Posición vertical del cuadrado izquierdo */
+    left: 45%; /* Posición horizontal del cuadrado izquierdo */
+    transform: translate(-50%, -50%);
+}
+
+/* Cuadrado derecho */
+.eyes::after {
+    content: '';
+    position: absolute;
+    width: 10px; /* Ancho del cuadrado */
+    height: 10px; /* Alto del cuadrado */
+    background-color: black;
+    top: 50%; /* Posición vertical del cuadrado derecho */
+    left: 55%; /* Posición horizontal del cuadrado derecho */
+    transform: translate(-50%, -50%);
+}
+
+/* Óvalo horizontal blanco */
+.white-oval {
+    position: absolute;
+    width: 370px; /* Ancho del rectángulo */
+    height: 90px; /* Alto del rectángulo */
+    background-color: white;
+    opacity: 40%;
+    border-radius: 60px; /* Redondear los bordes */
+    top: 400px; /* Posición vertical del rectángulo */
+    left: 50%; /* Posición horizontal del rectángulo */
+    transform: translateX(-50%);
+    overflow: hidden; /* Ocultar líneas divisorias que se extienden más allá del rectángulo */
+}
+
+/* Líneas horizontales */
+.white-oval::before,
+.white-oval::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 2px; /* Grosor de la línea negra horizontal */
+}
+
+.white-oval::before {
+    top: 30%; /* Posición de la primera línea horizontal */
+}
+
+.white-oval::after {
+    top: 60%; /* Posición de la segunda línea horizontal */
+}
+
+/* Líneas verticales */
+.white-oval::before::before,
+.white-oval::after::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 2px; /* Grosor de la línea negra vertical */
+    height: 100%;
+    left: 500px;
+}
+
+.white-oval::before::before {
+    left: 20%; /* Posición de la primera línea vertical */
+}
+
+.white-oval::after::before {
+    left: 40%; /* Posición de la segunda línea vertical */
+}
+
+.white-oval::before::before::before,
+.white-oval::after::before::before {
+    left: 80%; /* Posición de la tercera línea vertical */
+}
+
+
